@@ -25,10 +25,43 @@ public class Persona {
     private String usuario;
     @Column(nullable = false, length = 15)
     private String contrasena;
+    @Column(nullable = false, length = 15)
+    private String rol;
 
     @ManyToOne
     @JoinColumn(name = "tipodocumento_id")
     private Tipodocumento tipodocumento;
+
+    public Persona() {super();}
+
+    public Persona(long id, String name, String apellidos, String documento, String fechanacimento, String email, String telefono, String usuario, String contrasena, String rol, Tipodocumento tipodocumento) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.apellidos = apellidos;
+        this.documento = documento;
+        this.fechanacimento = fechanacimento;
+        this.email = email;
+        this.telefono = telefono;
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.rol = rol;
+        this.tipodocumento = tipodocumento;
+    }
+
+    public Persona(String name, String apellidos, String documento, String fechanacimento, String email, String telefono, String usuario, String contrasena, String rol, Tipodocumento tipodocumento) {
+        super();
+        this.name = name;
+        this.apellidos = apellidos;
+        this.documento = documento;
+        this.fechanacimento = fechanacimento;
+        this.email = email;
+        this.telefono = telefono;
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.rol = rol;
+        this.tipodocumento = tipodocumento;
+    }
 
     public long getId() {
         return id;
@@ -102,6 +135,13 @@ public class Persona {
         this.contrasena = contrasena;
     }
 
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 
     public Tipodocumento getTipodocumento() {
         return tipodocumento;
@@ -109,36 +149,5 @@ public class Persona {
 
     public void setTipodocumento(Tipodocumento tipodocumento) {
         this.tipodocumento = tipodocumento;
-    }
-
-    public Persona(String name, String apellidos, String documento, String fechanacimento, String email, String telefono, String usuario, String contrasena, Tipodocumento tipodocumento) {
-        super();
-        this.name = name;
-        this.apellidos = apellidos;
-        this.documento = documento;
-        this.fechanacimento = fechanacimento;
-        this.email = email;
-        this.telefono = telefono;
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.tipodocumento = tipodocumento;
-    }
-
-    public Persona(long id, String name, String apellidos, String documento, String fechanacimento, String email, String telefono, String usuario, String contrasena, Tipodocumento tipodocumento) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.apellidos = apellidos;
-        this.documento = documento;
-        this.fechanacimento = fechanacimento;
-        this.email = email;
-        this.telefono = telefono;
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.tipodocumento = tipodocumento;
-    }
-
-    public Persona() {
-        super();
     }
 }
