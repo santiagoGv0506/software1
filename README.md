@@ -1,6 +1,6 @@
-# software1
+# software1 
 
-**Integrantes:**
-*Santiago Gomez Villareal*
-*Nelson David Mendoza*
-*Kevin Dannie Guzman Duran*
+**Integrantes:** <br/> <br/>
+*Santiago Gomez Villareal*  
+*Nelson David Mendoza* <br/>
+*Kevin Dannie Guzman Duran* <br/>
